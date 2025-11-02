@@ -148,7 +148,7 @@ const Hero = () => {
         <Button
           size="lg"
           className="rounded-full bg-white/10 text-white border border-white/20 px-8 py-6 hover:bg-white/20 transition animate-float"
-          onClick={() => window.open("https://drive.google.com/file/d/1wlWJzeSB0S3DBnqCEFFODFVcZB5DePfI/view?usp=drive_link", "_blank")}
+          onClick={() => window.open("https://drive.google.com/file/d/1hy8iKQnU3t6Hv3qS6xDgM-D7beIL8Ia9/view?usp=drive_link", "_blank")}
         >
           Resume <MousePointerClickIcon />
         </Button>
