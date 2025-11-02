@@ -88,9 +88,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid gap-12 lg:grid-cols-2">
           {/* Contact Information */}
-          <div className="space-y-8 animate-slide-up">
+          <div className="space-y-8 animate-slide-up order-2 lg:order-1">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-neon-cyan">Let's Connect</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -141,7 +141,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-card/80 border-border hover:border-neon-purple/30 transition-all duration-300 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <Card className="bg-card/80 border-border hover:border-neon-purple/30 transition-all duration-300 animate-slide-up order-1 lg:order-2" style={{ animationDelay: "0.2s" }}>
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-6 text-neon-purple">Send Message</h3>
               

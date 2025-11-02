@@ -31,7 +31,7 @@ const projects = [
     title: "Delivery Partner",
     description: "Developed and optimized backend APIs enabling seamless delivery partner rate cards, incentive and bonus.",
     images: [image9],
-    technologies: ["Node.js", "Express.js", "MongoDB", "REST APIs", "Authentication", "State Management"],
+    technologies: ["Node.js", "MongoDB", "REST APIs"],
     featured: true
   },
   {
@@ -48,9 +48,9 @@ const projects = [
   },
   {
     title: "Inventory",
-    description: "mplemented real-time stock and GRN processing with accurate inventory adjustments.",
+    description: "Implemented real-time stock and GRN processing with accurate inventory adjustments.",
     images: [image10],
-    technologies: ["Node.js", "Express.js", "MongoDB", "REST APIs", "Data Validation", "Error Handling"],
+    technologies: ["Node.js", "MongoDB", "REST APIs", "Data Validation", "Error Handling"],
     featured: true
   },
   {

@@ -1,10 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Code, Database, GitBranch, Globe, Lightbulb, MousePointerClickIcon, Server, Zap } from "lucide-react";
+import { Code, Database, GitBranch, Globe, Lightbulb, MousePointerClickIcon, MoveRight, Server, Zap } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
-import image from "./../assets/arc.jpg"
+import image6 from '@/assets/law-3.jpg';
+import image2 from '@/assets/react-2.jpg';
+import { useNavigate } from "react-router-dom";
+
+const projects = [
+  {
+    title: "Reports Dashboard",
+    description: " Built a dynamic and interactive dashboard to view sales and reports using React.js.",
+    images: [image2],
+    technologies: ["React", "Hooks", "RESTful APIs", "State Management"],
+    // live: "#",
+    featured: true
+  },
+  {
+    title: "LawBoard",
+    description: "Built a web platform for advocates to manage clients and cases efficiently.",
+    images: [image6],
+    technologies: ["React", "Node.js", "RESTful APIs", "Client Management"],
+    github: "https://github.com/RitheshRoshan",
+    live: "https://law-board.onrender.com/",
+    featured: true
+  },
+];
 
 const Hero = () => {
+  const navigate = useNavigate();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -148,7 +171,7 @@ const Hero = () => {
         <Button
           size="lg"
           className="rounded-full bg-white/10 text-white border border-white/20 px-8 py-6 hover:bg-white/20 transition animate-float"
-          onClick={() => window.open("https://drive.google.com/file/d/1hy8iKQnU3t6Hv3qS6xDgM-D7beIL8Ia9/view?usp=drive_link", "_blank")}
+          onClick={() => window.open("https://drive.google.com/file/d/1Ea5YYU8Yvs5Zq_dK_75BDf22tWAUQugz/view?usp=sharing", "_blank")}
         >
           Resume <MousePointerClickIcon />
         </Button>
@@ -235,6 +258,58 @@ const Hero = () => {
               );
             })}
             <div className="absolute -z-10 inset-0 blur-3xl opacity-20 bg-gradient-to-br from-neon-purple to-neon-cyan"></div>
+          </div>
+          <div className="container mx-auto max-w-7xl text-center">
+            <p className="text-text-low tracking-widest text-sm mb-3">+ PROJECTS +</p>
+            <h2 className="text-3xl md:text-4xl font-semibold text-text-high">
+              What I’ve been up to
+            </h2>
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="mt-10 px-48"
+            >
+              <Button
+                size="lg"
+                className="rounded-full bg-white/10 text-white border border-white/20 px-8 py-6 hover:bg-white/20 transition animate-float"
+                onClick={() => navigate("/projects")}
+              >
+                See More <MoveRight />
+              </Button>
+            </motion.div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12">
+            {projects.map((project) => (
+              <a
+                key={project.title}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group block rounded-3xl overflow-hidden transition-all duration-500 hover:scale-[1.02]"
+              >
+                {/* Project Image */}
+                <div className="relative w-full h-72 md:h-80 overflow-hidden">
+                  <img
+                    src={project.images[0]}
+                    alt={project.title}
+                    className="w-full h-full object-cover transform group-hover:scale-100 transition-transform duration-[900ms] ease-out"
+                  />
+
+                  {/* Soft Fade Bottom Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent pointer-events-none" />
+                </div>
+
+                {/* Text Overlay */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="text-2xl font-sm text-white mb-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-white/60 text-sm line-clamp-2">
+                    {project.description}
+                  </p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section><section id="skills" className="py-24 px-6 relative overflow-hidden">
