@@ -382,7 +382,7 @@ const Projects = () => {
           <div className="text-center mb-16 animate-fade-in">
             <p className="text-text-low tracking-widest text-sm mb-3">+ EDUCATIONS BACKGROUND +</p>
             <h2 className="text-2xl md:text-3xl font-semibold text-text-high">
-              My academic journey and continuous learning
+              My academic journey
             </h2>
           </div>
 
