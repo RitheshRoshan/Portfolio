@@ -268,7 +268,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="mt-10 px-48"
+              className="mt-10 flex justify-center"
             >
               <Button
                 size="lg"
