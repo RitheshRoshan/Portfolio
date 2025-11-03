@@ -24,11 +24,11 @@ const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
   ];
 
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-[70%] backdrop-blur-xl bg-background/30 border border-white/10 rounded-2xl shadow-lg transition-all duration-300">
-      <div className="px-6 py-3 flex items-center justify-between">
+    <nav className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[94%] sm:w-[90%] md:w-[70%] backdrop-blur-xl bg-background/40 border border-white/10 rounded-xl shadow-lg transition-all duration-300">
+      <div className="px-4 py-2 sm:px-6 sm:py-3 flex items-center justify-between">
 
         <div className="flex items-center gap-6">
-            <div className="w-12 h-12 overflow-hidden rounded-full">
+            <div className="w-9 h-9 sm:w-12 sm:h-12 overflow-hidden rounded-full">
             <img
               src="/avatar.jpg"
               alt="Avatar"
@@ -65,7 +65,7 @@ const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background/40 backdrop-blur-xl border-b border-white/10 px-6 py-4">
+        <div className="md:hidden bg-background/50 backdrop-blur-xl border-b border-white/10 px-4 py-3 space-y-1">
           {navItems.map(item => (
             <button
               key={item.id}

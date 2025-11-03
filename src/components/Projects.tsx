@@ -230,7 +230,7 @@ const Projects = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
           {projects.map((project) => (
             <a
               key={project.title}
@@ -240,7 +240,7 @@ const Projects = () => {
               className="relative group block rounded-3xl overflow-hidden transition-all duration-500 hover:scale-[1.02]"
             >
               {/* Project Image */}
-              <div className="relative w-full h-72 md:h-80 overflow-hidden">
+              <div className="relative w-full h-48 sm:h-60 md:h-72 overflow-hidden">
                 <img
                   src={project.images[0]}
                   alt={project.title}
@@ -281,10 +281,10 @@ const Projects = () => {
                   className={`bg-card/80 border-border transition-all duration-500 animate-slide-up group transform hover:-translate-y-1 hover:rotate-[0.5deg] hover:shadow-xl ${exp.current ? 'ring-2 ring-neon-cyan/20' : ''}`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <CardContent className="p-8">
-                    <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:gap-6">
                       {/* Company Info */}
-                      <div className="flex-shrink-0 lg:w-80">
+                      <div className="w-full lg:flex-shrink-0 lg:w-80">
                         <div className="flex items-center gap-3 mb-3">
                           <div className="p-2 bg-gradient-primary rounded-lg">
                             <Building className="h-5 w-5 text-background" />
@@ -325,7 +325,7 @@ const Projects = () => {
                           {exp.responsibilities.map((responsibility, respIndex) => (
                             <li
                               key={respIndex}
-                              className="flex items-start gap-3 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1"
+                              className="flex items-start gap-3 text-muted-foreground text-sm sm:text-base transition-transform duration-300 group-hover:translate-x-1"
                               style={{ animationDelay: `${index * 0.1 + respIndex * 0.05}s` }}
                             >
                               <div className="w-2 h-2 bg-neon-cyan rounded-full mt-2 flex-shrink-0" />
@@ -395,8 +395,8 @@ const Projects = () => {
                   className="bg-card/80 border-border transition-all duration-500 group transform hover:-translate-y-1 hover:rotate-[0.5deg] hover:shadow-xl"
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
-                  <CardContent className="p-8">
-                    <div className="grid lg:grid-cols-4 gap-8">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8">
                       {/* Icon and Period */}
                       <div className="lg:col-span-1 text-center lg:text-left">
                         <div className="inline-flex p-4 bg-gradient-primary rounded-xl mb-4 group-hover:animate-glow">
@@ -434,7 +434,7 @@ const Projects = () => {
                                 style={{ animationDelay: `${index * 0.15 + highlightIndex * 0.05}s` }}
                               >
                                 <div className="w-2 h-2 bg-neon-cyan rounded-full flex-shrink-0" />
-                                <span className="text-sm text-muted-foreground">{highlight}</span>
+                                <span className="text-xs sm:text-sm text-muted-foreground">{highlight}</span>
                               </div>
                             ))}
                           </div>

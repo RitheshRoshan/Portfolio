@@ -312,7 +312,8 @@ const Hero = () => {
             ))}
           </div>
         </div>
-      </section><section id="skills" className="py-24 px-6 relative overflow-hidden">
+      </section>
+      <section id="skills" className="py-24 px-6 relative overflow-hidden">
         <div className="container  max-w-10xl relative z-10">
           <motion.div
             className="text-center mb-16"
@@ -346,15 +347,15 @@ const Hero = () => {
               }
             }}
           >
-            <div className="marquee-inner inline-flex items-center gap-12 animate-marquee whitespace-nowrap min-w-max">
+            <div className="marquee-inner inline-flex items-center gap-6 sm:gap-10 lg:gap-12 animate-marquee whitespace-nowrap min-w-max">
               {skillCategories.flatMap(({ icon: Icon, skills }) =>
                 skills.map((skill) => (
                   <div
                     key={skill}
-                    className="flex-none flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-neon-purple/40 transition"
+                    className="flex-none flex items-center gap-2 sm:gap-3 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-neon-purple/40 transition"
                   >
-                    <Icon className="w-5 h-5 text-neon-purple" />
-                    <span className="text-white">{skill}</span>
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-neon-purple" />
+                    <span className="text-white text-sm sm:text-base">{skill}</span>
                   </div>
                 ))
               )}
@@ -362,10 +363,10 @@ const Hero = () => {
                 skills.map((skill) => (
                   <div
                     key={skill + "-clone"}
-                    className="flex-none flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-neon-purple/40 transition"
+                    className="flex-none flex items-center gap-2 sm:gap-3 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-neon-purple/40 transition"
                   >
-                    <Icon className="w-5 h-5 text-neon-purple" />
-                    <span className="text-white">{skill}</span>
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-neon-purple" />
+                    <span className="text-white text-sm sm:text-base">{skill}</span>
                   </div>
                 ))
               )}
