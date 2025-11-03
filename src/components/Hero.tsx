@@ -210,9 +210,9 @@ const Hero = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
           {/* Text Content */}
-          <motion.div className="space-y-6" variants={fadeUp}>
+          <motion.div className="space-y-6 px-4 sm:px-8 md:px-0" variants={fadeUp}>
             <p className="text-lg text-muted-foreground leading-relaxed">
               I'm a passionate <span className="text-neon-cyan font-semibold">Full Stack Developer</span> skilled in
               React, Node.js, MongoDB, and Angular. With experience in building scalable web apps and RESTful APIs,
@@ -229,7 +229,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Highlights Cards */}
-          <div className="space-y-6 relative" style={{ animationDelay: "0.2s" }}>
+          <div className="space-y-6 relative max-w-md mx-auto lg:max-w-none" style={{ animationDelay: "0.2s" }}>
             {highlights.map((highlight, index) => {
               const Icon = highlight.icon;
               return (
