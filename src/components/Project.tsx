@@ -12,6 +12,7 @@ import image8 from '@/assets/law-2.jpg';
 import image9 from '@/assets/DE.jpg';
 import image10 from '@/assets/inventory.jpg';
 import image11 from '@/assets/nourisho.jpg';
+import image12 from '@/assets/admin.jpg'
 import { useEffect } from 'react';
 const projects = [
     {
@@ -20,6 +21,13 @@ const projects = [
         images: [image2, image1, image3],
         technologies: ["React", "Hooks", "RESTful APIs", "State Management"],
         // live: "#",
+        featured: true
+    },
+    {
+        title: "Operations Admin Panel",
+        description: "Developed an admin dashboard to manage operations, track activities, and control user access",
+        images: [image12],
+        technologies: ["Angular", "Node.js", "Role-Based Access Control"],
         featured: true
     },
     {
@@ -69,9 +77,9 @@ const projects = [
 ];
 
 const Project = () => {
-     useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
     return (
         <section id="projects" className="py-10 px-6">
             <div className="container mx-auto max-w-6xl text-center mb-16">
